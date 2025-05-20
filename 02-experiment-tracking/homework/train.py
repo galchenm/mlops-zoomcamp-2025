@@ -5,6 +5,11 @@ import click
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
+import mlflow
+import mlflow.sklearn
+
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
+mlflow.set_experiment("train-hw-mlflow")
 
 def load_pickle(filename: str):
     with open(filename, "rb") as f_in:
@@ -18,16 +23,27 @@ def load_pickle(filename: str):
     help="Location where the processed NYC taxi trip data was saved"
 )
 def run_train(data_path: str):
-
+    mlflow.sklearn.autolog()
+    
     X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
+    with mlflow.start_run():
 
-    rf = RandomForestRegressor(max_depth=10, random_state=0)
-    rf.fit(X_train, y_train)
-    y_pred = rf.predict(X_val)
+        mlflow.log_param("train-data-path", "./output/train.pkl")
+        mlflow.log_param("valid-data-path", "./output/val.pkl")
+        
+        rf = RandomForestRegressor(max_depth=10, random_state=0)
+        rf.fit(X_train, y_train)
+        y_pred = rf.predict(X_val)
 
-    rmse = mean_squared_error(y_val, y_pred, squared=False)
-
-
+        rmse = mean_squared_error(y_val, y_pred, squared=False)
+        mlflow.log_metric("rmse", rmse)
+        mlflow.sklearn.log_model(
+                rf, 
+                artifact_path="model", 
+                input_example=X_val[:1],
+                pip_requirements=["scikit-learn==1.0.2", "cloudpickle==2.0.0"]
+            )
+        
 if __name__ == '__main__':
     run_train()
