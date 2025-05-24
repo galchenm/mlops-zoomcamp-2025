@@ -66,7 +66,7 @@ Tip 2: don't modify the hyperparameters of the model to make sure that the train
 
 What is the value of the `min_samples_split` parameter:
 
-* 2
+* 2 - this
 * 4
 * 8
 * 10
