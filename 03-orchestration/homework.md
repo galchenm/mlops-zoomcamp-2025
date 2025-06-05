@@ -10,22 +10,23 @@ You can use the same tool you used when completing the module,
 or choose a different one for your homework.
 
 What's the name of the orchestrator you chose? 
-
+*Mage
 
 ## Question 2. Version
 
 What's the version of the orchestrator? 
 
+**0.9.76
 
 ## Question 3. Creating a pipeline
 
 Let's read the March 2023 Yellow taxi trips data.
 
-How many records did we load? 
+How many records did we load? = 3403766
 
 - 3,003,766
 - 3,203,766
-- 3,403,766
+- 3,403,766 ** right answer
 - 3,603,766
 
 (Include a print statement in your code)
@@ -55,11 +56,11 @@ def read_dataframe(filename):
 
 Let's apply to the data we loaded in question 3. 
 
-What's the size of the result? 
+What's the size of the result? - 3316216
 
 - 2,903,766
 - 3,103,766
-- 3,316,216 
+- 3,316,216 ** right answer
 - 3,503,766
 
 ## Question 5. Train a model
@@ -72,12 +73,12 @@ We will now train a linear regression model using the same code as in homework 1
 
 Let's now use it in the pipeline. We will need to create another transformation block, and return both the dict vectorizer and the model.
 
-What's the intercept of the model? 
+What's the intercept of the model? - 24.776368754137366
 
 Hint: print the `intercept_` field in the code block
 
 - 21.77
-- 24.77
+- 24.77 ** right answer
 - 27.77
 - 31.77
 
