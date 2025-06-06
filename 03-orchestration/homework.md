@@ -16,7 +16,7 @@ What's the name of the orchestrator you chose?
 
 What's the version of the orchestrator? 
 
-**0.9.76
+**2.12.1
 
 ## Question 3. Creating a pipeline
 
