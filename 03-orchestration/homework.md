@@ -86,11 +86,11 @@ Hint: print the `intercept_` field in the code block
 
 The model is trained, so let's save it with MLFlow.
 
-Find the logged model, and find MLModel file. What's the size of the model? (`model_size_bytes` field):
+Find the logged model, and find MLModel file. What's the size of the model? (`model_size_bytes` field): - 4534
 
 * 14,534
 * 9,534
-* 4,534
+* 4,534 **
 * 1,534
 
 
