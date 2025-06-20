@@ -6,7 +6,7 @@ joblib
 pyarrow
 psycopg
 psycopg-binary
-evidently
+evidently 
 numpy
 scikit-learn
 jupyter
