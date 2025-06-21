@@ -1,0 +1,72 @@
+{
+  "id": "01979369-762e-7d09-b634-6b1b3d3c5653",
+  "name": "NYC Taxi Data Quality Project",
+  "description": "Fare Amount measure",
+  "dashboard": {
+    "name": "NYC Taxi Data Quality Project",
+    "panels": [
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelCounter",
+        "id": "0197936c-00c9-7c8d-85e6-1a887415f67e",
+        "title": "NYC taxi data dashboard for March 2024",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 2,
+        "agg": "none",
+        "value": null,
+        "text": null
+      },
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelPlot",
+        "id": "0197936c-00ca-7b77-9b0a-6fd05396d0a9",
+        "title": "Fare Amount Quantile Count",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 1,
+        "values": [
+          {
+            "field_path": "current.value",
+            "metric_id": "ColumnQuantileMetric",
+            "metric_fingerprint": null,
+            "metric_args": {},
+            "legend": "count"
+          }
+        ],
+        "plot_type": "bar"
+      },
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelPlot",
+        "id": "0197936c-00cb-773d-8541-ed4ab318eb36",
+        "title": "Number of Missing Values",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 1,
+        "values": [
+          {
+            "field_path": "current.number_of_missing_values",
+            "metric_id": "DatasetSummaryMetric",
+            "metric_fingerprint": null,
+            "metric_args": {},
+            "legend": "count"
+          }
+        ],
+        "plot_type": "line"
+      }
+    ],
+    "tabs": [],
+    "tab_id_to_panel_ids": {}
+  },
+  "team_id": null,
+  "date_from": null,
+  "date_to": null,
+  "created_at": "2025-06-21T16:54:11.758737"
+}

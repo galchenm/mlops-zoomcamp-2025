@@ -1,0 +1,93 @@
+{
+  "id": "01979419-047d-7a5d-b5da-84b1041e2332",
+  "name": "NYC Taxi Data Quality Project",
+  "description": "Fare Amount measure",
+  "dashboard": {
+    "name": "NYC Taxi Data Quality Project",
+    "panels": [
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelCounter",
+        "id": "01979419-18f9-7a53-869e-648e77cb9754",
+        "title": "NYC taxi data dashboard for March 2024",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 2,
+        "agg": "none",
+        "value": null,
+        "text": null
+      },
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelPlot",
+        "id": "01979419-18fa-7aca-afd8-10fc9a693f7b",
+        "title": "Fare Amount Quantile Count",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 1,
+        "values": [
+          {
+            "field_path": "current.value",
+            "metric_id": "ColumnQuantileMetric",
+            "metric_fingerprint": null,
+            "metric_args": {},
+            "legend": "count"
+          }
+        ],
+        "plot_type": "bar"
+      },
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelPlot",
+        "id": "01979419-18fb-76b5-9ceb-6b4d871d7113",
+        "title": "Number of Missing Values",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 1,
+        "values": [
+          {
+            "field_path": "current.number_of_missing_values",
+            "metric_id": "DatasetSummaryMetric",
+            "metric_fingerprint": null,
+            "metric_args": {},
+            "legend": "count"
+          }
+        ],
+        "plot_type": "line"
+      },
+      {
+        "type": "evidently:dashboard_panel:DashboardPanelPlot",
+        "id": "01979419-19bc-7f57-bee5-14d6464a2ade",
+        "title": "Inference Count",
+        "filter": {
+          "metadata_values": {},
+          "tag_values": [],
+          "include_test_suites": false
+        },
+        "size": 1,
+        "values": [
+          {
+            "field_path": "current.number_of_rows",
+            "metric_id": "DatasetSummaryMetric",
+            "metric_fingerprint": null,
+            "metric_args": {},
+            "legend": "count"
+          }
+        ],
+        "plot_type": "bar"
+      }
+    ],
+    "tabs": [],
+    "tab_id_to_panel_ids": {}
+  },
+  "team_id": null,
+  "date_from": null,
+  "date_to": null,
+  "created_at": "2025-06-21T20:05:56.989883"
+}

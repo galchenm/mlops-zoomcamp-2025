@@ -11,6 +11,12 @@ conda create -n py11 python=3.11
 conda activate py11
 ```
 
+or 
+
+```bash
+conda create -n evidently-ui python=3.9 -y
+conda activate evidently-ui
+```
 ## Intalling all requireents
 
 ```bash

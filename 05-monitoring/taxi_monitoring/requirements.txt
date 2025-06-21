@@ -1,12 +1,13 @@
 prefect
-tdqm
+tqdm
 requests
-pandas
 joblib
 pyarrow
 psycopg
-psycopg-binary
+psycopg_binary
 evidently 
+pandas
 numpy
 scikit-learn
 jupyter
+matplotlib
