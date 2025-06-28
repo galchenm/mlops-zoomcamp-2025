@@ -223,7 +223,7 @@ df_input.to_parquet(
 
 What's the size of the file?
 
-* 3620
+* 3620 *
 * 23620
 * 43620
 * 63620
@@ -255,7 +255,7 @@ verify the result is correct.
 What's the sum of predicted durations for the test dataframe?
 
 * 13.08
-* 36.28
+* 36.28 *
 * 69.28
 * 81.08
 
